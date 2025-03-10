@@ -1,0 +1,61 @@
+.form {
+  width: 100%;
+  max-width: 400px;
+  margin-left: 50px;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  display: block;
+  margin-top: 30px;
+}
+
+.form input[type='number'],
+.form fieldset,
+.form button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form input[type='number'] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form fieldset {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.form button {
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #4c72ff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background-color: #3b5edc;
+}
