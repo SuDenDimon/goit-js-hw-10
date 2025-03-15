@@ -5,18 +5,18 @@ const delayForm = document.querySelector('.form');
 
 delayForm.addEventListener('submit', event => {
   event.preventDefault();
-  const timer = event.currentTarget.elements.delay.value;
+  const delay = event.currentTarget.elements.delay.value;
   const radio = event.currentTarget.elements.state.value;
 
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log(timer, radio);
+      console.log(delay, radio);
       if (radio === 'fulfilled') {
-        resolve(timer);
+        resolve(delay);
       } else {
-        reject(timer);
+        reject(delay);
       }
-    }, timer);
+    }, delay);
   });
 
   // Registering promise callbacks
@@ -25,14 +25,14 @@ delayForm.addEventListener('submit', event => {
       iziToast.success({
         color: 'green',
         position: 'topRight',
-        message: `✅ Fulfilled promise in ${timer}ms`,
+        message: `✅ Fulfilled promise in ${value}ms`,
       });
     })
     .catch(error => {
       iziToast.error({
         color: 'red',
         position: 'topRight',
-        message: `❌ Rejected promise in ${timer}ms`,
+        message: `❌ Rejected promise in ${error}ms`,
       });
     });
 });
